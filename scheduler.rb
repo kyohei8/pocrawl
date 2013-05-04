@@ -1,3 +1,5 @@
 def add
-  puts '=================> add'
+  puts '=================> addadd'
 end
+
+add
