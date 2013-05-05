@@ -1,3 +1,8 @@
+require 'net/https'
+require 'uri'
+require 'rubygems'
+require 'json'
+require './models.rb'
 def https_request(url, data)
   puts data
   response = nil
