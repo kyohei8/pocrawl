@@ -1,4 +1,5 @@
 # coding: utf-8
+require "rubygems"
 require 'sinatra'
 require 'rss'
 require 'dm-core'
