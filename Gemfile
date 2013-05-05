@@ -12,5 +12,7 @@ gem 'dm-core'
 gem 'dm-migrations'
 gem 'dm-validations'
 gem 'dm-validations-i18n'
-gem 'dm-sqlite-adapter'
 gem 'dm-postgres-adapter'
+group :development do
+  gem 'dm-sqlite-adapter'
+end
