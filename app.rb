@@ -6,7 +6,8 @@ require './models.rb'
 #require './lib/Pocket.rb'
 require 'net/https'
 require 'uri'
-require 'JSON'
+require 'rubygems'
+require 'json'
 require './helper.rb'
 
 enable :sessions
