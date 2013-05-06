@@ -30,7 +30,18 @@ OPTION_URL = {
 
 
 get '/' do
-  'Home!'
+  url = URI.parse('https://getpocket.com/v3/get')
+  user = User.first()
+  if user.nil?
+    raise 'err: User not found'
+  end
+  data = {
+    :consumer_key => '12545-b27b4b1d15d45394ffc1980b',
+    :access_token => user.token,
+  }
+  response = https_request url, data
+  res = JSON.parse(response.body)
+  "登録件数：#{res['list'].size}件"
 end
 
 # pocketの認証を行う
