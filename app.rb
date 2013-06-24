@@ -17,26 +17,25 @@ helpers do
   end
 end
 
-CONSUMER_KEY = '12545-b27b4b1d15d45394ffc1980b' #TODO
+CONSUMER_KEY = ENV['POCKET_CONSUMER_KEY']
 BASE_URL = 'https://getpocket.com'
 OPTION_URL = {
   :request_path => '/v3/oauth/request',
   :authorize_path => '/v3/oauth/authorize',
   :user_auth_path => '/auth/authorize',
   :get_url => '/v3/get',
-  :add_url => '/v3/add',
-  :mod_url => '/v3/send'
 }
 
 
 get '/' do
-  url = URI.parse('https://getpocket.com/v3/get')
+  #現在Pocketに登録されている件数を取得
+  url =  URI.parse(BASE_URL + OPTION_URL[:get_url])
   user = User.first()
   if user.nil?
     raise 'err: User not found'
   end
   data = {
-    :consumer_key => '12545-b27b4b1d15d45394ffc1980b',
+    :consumer_key => CONSUMER_KEY,
     :access_token => user.token,
   }
   response = https_request url, data

@@ -3,8 +3,9 @@ require 'uri'
 require 'rubygems'
 require 'json'
 require './models.rb'
+
+# httpリクエストを行う
 def https_request(url, data)
-  puts data
   response = nil
   http = Net::HTTP.new(url.host, url.port)
   http.use_ssl = true
@@ -23,19 +24,14 @@ def https_request(url, data)
   response
 end
 
-
-def add(target_url)
+# Pocketに記事を追加
+def add(atoken, target_url)
   url = URI.parse('https://getpocket.com/v3/add')
-  user = User.first()
-  if user.nil?
-    raise 'err: User not found'
-  end
   data = {
     :consumer_key => '12545-b27b4b1d15d45394ffc1980b',
-    :access_token => user.token,
+    :access_token => atoken,
     :url => target_url
   }
   response = https_request url, data
-  res = JSON.parse(response.body)
-  res['status'].to_s
+  JSON.parse(response.body)
 end

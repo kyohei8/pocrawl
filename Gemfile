@@ -6,6 +6,7 @@ gem 'rails'
 gem 'slim'
 gem 'coffee-script'
 gem 'sass'
+gem 'thin'
 gem 'activesupport', :require => 'active_support/all'
 
 gem 'pg'
