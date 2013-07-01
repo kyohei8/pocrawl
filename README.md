@@ -1,6 +1,6 @@
 pocrawl
 =======
-https://travis-ci.org/kyohei8/pocrawl.png
+[![Build Status](https://travis-ci.org/kyohei8/pocrawl.png?branch=master)](https://travis-ci.org/kyohei8/pocrawl)
 
 Pocket + Crawl
 
