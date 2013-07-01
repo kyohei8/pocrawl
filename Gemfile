@@ -10,7 +10,7 @@ gem 'thin'
 gem 'activesupport', :require => 'active_support/all'
 
 gem 'pg'
-gem 'dm-core'
+gem 'dm-core', '~> 1.2.1'
 gem 'dm-migrations'
 gem 'dm-validations'
 gem 'dm-validations-i18n'
