@@ -1,9 +1,3 @@
 language: ruby
-  rvm:
-    - 1.9.3
-  gemfile:
-    - Gemfile
-  branches:
-    only:
-      - master
-      - develop
+rvm:
+  - 1.9.3
