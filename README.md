@@ -1,5 +1,7 @@
 pocrawl
 =======
+https://travis-ci.org/kyohei8/pocrawl.png
+
 Pocket + Crawl
 
 Add to Pocket periodically retrieves the RSS.
