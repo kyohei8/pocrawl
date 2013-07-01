@@ -5,5 +5,8 @@ before_install:
   - gem install bundler --pre
 script:
   - bundle exec rake db:set
-env:
-  - DB=postgresql
+  
+test:
+  adapter: sqlite3
+  database: ":memory:"
+  timeout: 500
