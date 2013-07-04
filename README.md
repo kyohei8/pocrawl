@@ -6,6 +6,12 @@ Pocket + Crawl
 
 Add to Pocket periodically retrieves the RSS.
 
+### clone 
+```
+$ git clone git@github.com:kyohei8/pocrawl.git
+$ cd pocrawl
+```
+
 ### setup 
 ```
 $ bundle install
@@ -14,10 +20,15 @@ setup database
 ```
 $ rake db:set
 ```
+#### create .evn file
+add Pocket App token
+```
+$ echo POCKET_CONSUMER_KEY=XXXXX-XXXXXXXX-XXXXXX >> .env
+```
 
 ### start
 ```
-foreman start
+$ foreman start
 ```
 
 ### authentication to pocket
