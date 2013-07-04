@@ -20,6 +20,11 @@ $ rake db:set
 foreman start
 ```
 
+### authentication to pocket
+`http://localhost/auth`
+
+-> authentication to pocket
+
 ### Heroku Scheduler job command
 ```
 bundle exec ruby scheduler.rb
